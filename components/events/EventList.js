@@ -9,6 +9,7 @@ export default function EventList(props) {
         <EventItem
           key={evt.id}
           id={evt.id}
+          title={evt.title}
           location={evt.location}
           date={evt.date}
           image={evt.image}
