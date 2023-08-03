@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from '@/styles/EventItem.module.css';
 
 export default function EventItem(props) {
   const { title, image, date, location, id } = props;
@@ -10,19 +11,19 @@ export default function EventItem(props) {
   const addressFormatted = location.replace(', ', '\n');
   const linkFomatted = `/events/${id}`;
   return (
-    <li>
+    <li className={styles.item}>
       <img src={`/${image}`} alt={title} />
-      <div>
+      <div className={styles.content}>
         <div>
           <h2>{title}</h2>
-          <div>
+          <div className={styles.date}>
             <time>{dateFormatted}</time>
           </div>
-          <div>
+          <div className={styles.address}>
             <address>{addressFormatted}</address>
           </div>
         </div>
-        <div>
+        <div className={styles.actions}>
           <Link href={linkFomatted}>Explore event</Link>
         </div>
       </div>
