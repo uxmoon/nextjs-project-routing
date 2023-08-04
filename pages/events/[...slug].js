@@ -1,4 +1,5 @@
 import EventList from '@/components/events/EventList';
+import ResultsTitle from '@/components/events/ResultsTitle';
 import { getFilteredEvents } from '@/dummy-data';
 import { useRouter } from 'next/router';
 
@@ -31,8 +32,10 @@ export default function FilteredEventsPage() {
   if (!eventsFiltered || eventsFiltered.length === 0) {
     return <p>No events found in the chosen filter.</p>;
   }
+  const date = new Date(yearNum, monthNum - 1);
   return (
     <>
+      <ResultsTitle date={date} />
       <EventList items={eventsFiltered} />
     </>
   );
