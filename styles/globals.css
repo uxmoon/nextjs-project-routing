@@ -4,6 +4,9 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-rounded: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa,
+    Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri,
+    source-sans-pro, sans-serif;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -87,7 +90,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: var(--font-mono);
+  font-family: var(--font-rounded);
   /* background: linear-gradient(
       to bottom,
       transparent,
